@@ -24,14 +24,20 @@
     "allure:report": "allure generate allure-results --clean -o allure-report",
     "pretest:allure": "npm run allure:clear",
     "test:qa:allure": "npm run pretest:allure && npm run cy:run:qa:allure || npm run posttest:qa:allure ",
-    "posttest:qa:allure": "npm run allure:report"
+    "posttest:qa:allure": "npm run allure:report",
+    "cy:run:qa:cucumber": "cypress run --env allure=true --config-file cypress.qa.cucumber.config.js",
+    "test:qa:cucumber": "npm run pretest:allure && npm run cy:run:qa:cucumber || npm run posttest:qa:cucumber ",
+    "posttest:qa:cucumber": "npm run allure:report"
   },
   "author": "Kent Paul Noel Domaoal",
   "license": "ISC",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^14.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
     "@shelex/cypress-allure-plugin": "^2.34.0",
     "allure-commandline": "^2.20.1",
     "cypress": "^11.2.0",
+    "esbuild": "^0.16.1",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.1",
     "mochawesome-report-generator": "^6.2.0",
