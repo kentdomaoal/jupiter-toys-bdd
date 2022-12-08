@@ -1,7 +1,7 @@
-import { BasePage } from "./BasePage";
-import { Utility } from "../../support/utility";
+import { Page } from "./Page";
+import { PriceUtil } from "../../support/util/PriceUtil";
 
-export class CartPage extends BasePage {
+export class CartPage extends Page {
 
     constructor(){
         super();
@@ -11,7 +11,7 @@ export class CartPage extends BasePage {
     getPrice(name){
         return cy.contains('td', name)
             .next().invoke('text')
-            .then((price) => { return parseFloat(price.match(Utility.getRegexFloat())) })
+            .then((price) => { return parseFloat(price.match(PriceUtil.getRegexFloat())) })
             .as('price');
     }
 
@@ -19,7 +19,7 @@ export class CartPage extends BasePage {
         return cy.contains('td', name)
             .next().next().next()
             .invoke('text')
-            .then((subtotal) => { return parseFloat(subtotal.match(Utility.getRegexFloat())) })
+            .then((subtotal) => { return parseFloat(subtotal.match(PriceUtil.getRegexFloat())) })
             .as('subtotal')
 
             //store subtotal into array
@@ -33,7 +33,7 @@ export class CartPage extends BasePage {
     getTotal(){
         return cy.get('.total')
             .invoke('text')
-            .then((total) => { return parseFloat(total.match(Utility.getRegexFloat())) })
+            .then((total) => { return parseFloat(total.match(PriceUtil.getRegexFloat())) })
     }
 
     sum(subTotalsArray){

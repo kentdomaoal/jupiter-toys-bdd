@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Utility } from "../../support/utility";
+import { FileUtil } from "../../support/util/FileUtil";
 import { CartPage } from "../pages/CartPage";
 import { ShopPage } from "../pages/ShopPage";
 
@@ -14,7 +14,8 @@ describe('Jupiter Toys Cart Page Tests', () => {
 
     before(() => {
         // read test data
-        cy.fixture(Utility.getFilename('shoppingList')).as('shoppingList');
+        // cy.fixture(FileUtil.getFilename('shoppingList')).as('shoppingList');
+        cy.fixture('shoppingList').as('shoppingList');
     })
 
     it('Buys Products and validate prices, subtotal, total in Cart Page', function () {

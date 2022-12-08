@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Utility } from "../../support/utility";
+import { FileUtil } from "../../support/util/FileUtil";
 import { ContactPage } from "../pages/ContactPage";
 import { Given, When, Then, defineStep as And } from "@badeball/cypress-cucumber-preprocessor";
 
@@ -8,7 +8,8 @@ import { Given, When, Then, defineStep as And } from "@badeball/cypress-cucumber
 
   beforeEach(() => {
     // read test data
-    cy.fixture(Utility.getFilename('userFeedback')).as('userFeedback');
+    //cy.fixture(FileUtil.getFilename('userFeedback')).as('userFeedback');
+    cy.fixture('userFeedback').as('userFeedback');
   })
 
   Given('A user opens Jupiter Toys website', function() {

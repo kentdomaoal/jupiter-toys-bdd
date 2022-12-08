@@ -1,4 +1,4 @@
-export class Utility {
+export class FileUtil {
 
     static getFilename(filename){
         if (typeof Cypress.env('ENV') !== 'undefined' && Cypress.env('ENV').trim() !== '') {
@@ -6,8 +6,5 @@ export class Utility {
         }
         return filename;
     }
-
-    static getRegexFloat(){
-        return /[+-]?\d+(\.\d+)?/g;
-    }
+    
 }

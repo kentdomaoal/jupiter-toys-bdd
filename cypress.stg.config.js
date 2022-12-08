@@ -12,6 +12,7 @@ module.exports = defineConfig({
   watchForFileChanges : false,
   screenshotOnRunFailure: true,
   screenshotsFolder: 'cypress/results/assets',
+  fixturesFolder: 'cypress/fixtures/stg/',
   video: false,
   reporter: 'mochawesome',
   reporterOptions: {

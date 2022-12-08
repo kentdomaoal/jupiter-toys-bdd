@@ -1,6 +1,6 @@
-import { BasePage } from "./BasePage";
+import { Page } from "./Page";
 
-export class ContactPage extends BasePage {
+export class ContactPage extends Page {
 
     ERROR_MESSAGE = 'but we won\'t get it unless you complete the form correctly';
     FIELD_ERROR_MESSAGE = '<field> is required'

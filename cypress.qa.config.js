@@ -10,9 +10,11 @@ module.exports = defineConfig({
     baseUrl: 'http://jupiter.cloud.planittesting.com',
   },
   watchForFileChanges : false,
+  fixturesFolder: 'cypress/fixtures/qa/',
   screenshotOnRunFailure: true,
   screenshotsFolder: 'cypress/results/assets',
   video: false,
+  fixturesFolder: 'cypress/fixtures/qa/',
   reporter: 'mochawesome',
   reporterOptions: {
     reportDir: 'cypress/results',

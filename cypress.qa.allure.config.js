@@ -14,4 +14,5 @@ module.exports = defineConfig({
   },
   watchForFileChanges: false,
   video: false,
+  fixturesFolder: 'cypress/fixtures/qa/'
 });

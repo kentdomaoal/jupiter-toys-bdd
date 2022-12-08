@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Utility } from "../../support/utility";
+import { FileUtil } from "../../support/util/FileUtil";
 import { CartPage } from "../pages/CartPage";
 import { ShopPage } from "../pages/ShopPage";
 import { Given, When, Then, defineStep as And } from "@badeball/cypress-cucumber-preprocessor";
@@ -11,7 +11,8 @@ import { Given, When, Then, defineStep as And } from "@badeball/cypress-cucumber
 
     before(() => {
         // read test data
-        cy.fixture(Utility.getFilename('shoppingList')).as('shoppingList');
+        // cy.fixture(FileUtil.getFilename('shoppingList')).as('shoppingList');
+        cy.fixture('shoppingList').as('shoppingList');
     })
 
     When ('user buys products', function() {

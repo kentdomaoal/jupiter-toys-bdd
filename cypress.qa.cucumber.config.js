@@ -37,5 +37,6 @@ module.exports = defineConfig({
     baseUrl: 'http://jupiter.cloud.planittesting.com'
   },
   watchForFileChanges: false,
+  fixturesFolder: 'cypress/fixtures/qa/',
   video: false,
 });

@@ -1,6 +1,7 @@
-import { BasePage } from "./BasePage";
+import { Page } from "./Page";
+import { PriceUtil } from "../../support/util/PriceUtil";
 
-export class ShopPage extends BasePage {
+export class ShopPage extends Page {
 
     constructor(){
         super();
@@ -18,7 +19,7 @@ export class ShopPage extends BasePage {
                 .children('.product-price')
                 .invoke('text')
                 .then((price) => {
-                    productPrice = parseFloat(price.replace('$', ''))
+                    productPrice = parseFloat(price.match(PriceUtil.getRegexFloat()))
                     return productPriceMap.set(product.name, productPrice)
                 })
                 .as('productPriceMap');

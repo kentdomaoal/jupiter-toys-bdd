@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { Utility } from "../../support/utility";
+import { FileUtil } from "../../support/util/FileUtil";
 import { ContactPage } from "../pages/ContactPage";
 
 describe('Jupiter Toys Contact Page Tests', () => {
@@ -11,7 +11,8 @@ describe('Jupiter Toys Contact Page Tests', () => {
     cy.visit("/");
 
     // read test data
-    cy.fixture(Utility.getFilename('userFeedback')).as('userFeedback');
+    // cy.fixture(FileUtil.getFilename('userFeedback')).as('userFeedback');
+    cy.fixture('userFeedback').as('userFeedback');
   })
 
   it('Navigates to Contact Page and validate error messages for mandatory fields', function() {

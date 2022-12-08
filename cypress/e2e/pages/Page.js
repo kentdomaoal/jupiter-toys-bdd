@@ -1,4 +1,4 @@
-export class BasePage {
+export class Page {
 
     navigateTo(page){
         cy.contains('a', page).click();
