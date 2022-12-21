@@ -1,4 +1,8 @@
-# planit-assessment-bdd
+# jupiter-toys-bdd
+
+Sample Test automation using Cypress + Cucumber. 
+
+HTML Report was generated via Allure-report.
 
 ## How to run in local machine
 
@@ -9,9 +13,9 @@
 
 ## 1. Clone the project
 
-       git clone https://github.com/kentdomaoal/planit-assessment-bdd.git
+       git clone https://github.com/kentdomaoal/jupiter-toys-bdd.git
        
-       cd planit-assessment-bdd
+       cd jupiter-toys-bdd
 
 ## 2. Install dependencies
 
